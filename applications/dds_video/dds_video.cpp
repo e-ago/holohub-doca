@@ -137,6 +137,8 @@ class V4L2ToDDS : public holoscan::Application {
         Arg("width", 640u), Arg("height", 480u));
 
     auto dds = make_operator<ops::DDSVideoPublisherOp>("dds",
+        Arg("participant_qos", std::string("HoloscanDDSTransport::SHMEM+LAN")),
+        Arg("writer_qos", std::string("HoloscanDDSDataFlow::Video")),
         Arg("domain_id", domain_id_),
         Arg("stream_id", stream_id_));
 
@@ -163,16 +165,19 @@ class DDSToHoloviz : public holoscan::Application {
     std::shared_ptr<UnboundedAllocator> allocator = make_resource<UnboundedAllocator>("pool");
 
     //  DDS Video Subscriber
+    auto participant_qos = std::string("HoloscanDDSTransport::SHMEM+LAN");
     auto video_subscriber = make_operator<ops::DDSVideoSubscriberOp>("video_subscriber",
         Arg("allocator", allocator),
         Arg("domain_id", domain_id_),
         Arg("stream_id", stream_id_),
-        Arg("reader_qos", std::string("HoloscanDDSLibrary::VideoStreamingProfile")));
+        Arg("participant_qos", participant_qos),
+        Arg("reader_qos", std::string("HoloscanDDSDataFlow::Video")));
 
     // DDS Shapes Subscriber
     auto shapes_subscriber = make_operator<ops::DDSShapesSubscriberOp>("shapes_subscriber",
         Arg("domain_id", domain_id_),
-        Arg("reader_qos", std::string("HoloscanDDSLibrary::ShapeReaderProfile")));
+        Arg("participant_qos", participant_qos),
+        Arg("reader_qos", std::string("HoloscanDDSDataFlow::Shapes")));
 
     // DDS Shapes Renderer
     auto shapes_renderer = make_operator<ops::DDSShapesRenderer>("shapes_renderer",
