@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://nvidia-holoscan.github.io/holohub/">
+        <link rel="canonical" href="https://nvidia-holoscan.github.io/holohub/tutorials/integrate_external_libs_into_pipeline/">
       
       
+        <link rel="prev" href="../holoscan_response_time_analysis/">
       
-        <link rel="next" href="workflows/">
+      
+        <link rel="next" href="../windows_vm/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Holoscan Reference Applications - Holoscan Reference Applications</title>
+        <title>Integrate External Libraries into a Holoscan Pipeline (latest) - Holoscan Reference Applications</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,17 +48,17 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="assets/css/color-schemes.css">
+      <link rel="stylesheet" href="../../assets/css/color-schemes.css">
     
-      <link rel="stylesheet" href="assets/css/fonts.css">
+      <link rel="stylesheet" href="../../assets/css/fonts.css">
     
-      <link rel="stylesheet" href="assets/css/custom-material.css">
+      <link rel="stylesheet" href="../../assets/css/custom-material.css">
     
-      <link rel="stylesheet" href="assets/css/jupyter-themes.css">
+      <link rel="stylesheet" href="../../assets/css/jupyter-themes.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#holoscan-reference-applications" class="md-skip">
+        <a href="#best-practices-to-integrate-external-libraries-into-holoscan-pipelines" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +112,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Holoscan Reference Applications" class="md-header__button md-logo" aria-label="Holoscan Reference Applications" data-md-component="logo">
+    <a href="../.." title="Holoscan Reference Applications" class="md-header__button md-logo" aria-label="Holoscan Reference Applications" data-md-component="logo">
       
   
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -138,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Holoscan Reference Applications
+              Integrate External Libraries into a Holoscan Pipeline (latest)
             
           </span>
         </div>
@@ -249,11 +251,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -274,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="workflows/" class="md-tabs__link">
+        <a href="../../workflows/" class="md-tabs__link">
           
   
   
@@ -296,7 +296,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="applications/" class="md-tabs__link">
+        <a href="../../applications/" class="md-tabs__link">
           
   
   
@@ -318,7 +318,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="operators/" class="md-tabs__link">
+        <a href="../../operators/" class="md-tabs__link">
           
   
   
@@ -336,11 +336,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="tutorials/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -362,7 +364,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="benchmarks/" class="md-tabs__link">
+        <a href="../../benchmarks/" class="md-tabs__link">
           
   
   
@@ -387,9 +389,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -400,7 +400,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Holoscan Reference Applications" class="md-nav__button md-logo" aria-label="Holoscan Reference Applications" data-md-component="logo">
+    <a href="../.." title="Holoscan Reference Applications" class="md-nav__button md-logo" aria-label="Holoscan Reference Applications" data-md-component="logo">
       
   
   <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -435,19 +435,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -458,7 +449,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -493,7 +483,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="workflows/" class="md-nav__link ">
+            <a href="../../workflows/" class="md-nav__link ">
               
   
   
@@ -549,7 +539,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="workflows/ai_surgical_video/" class="md-nav__link ">
+            <a href="../../workflows/ai_surgical_video/" class="md-nav__link ">
               
   
   
@@ -739,7 +729,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/" class="md-nav__link ">
+            <a href="../../applications/" class="md-nav__link ">
               
   
   
@@ -795,7 +785,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/adv_networking_bench/" class="md-nav__link ">
+            <a href="../../applications/adv_networking_bench/" class="md-nav__link ">
               
   
   
@@ -854,7 +844,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/aja_video_capture/" class="md-nav__link ">
+            <a href="../../applications/aja_video_capture/" class="md-nav__link ">
               
   
   
@@ -913,7 +903,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/basic_networking_ping/" class="md-nav__link ">
+            <a href="../../applications/basic_networking_ping/" class="md-nav__link ">
               
   
   
@@ -972,7 +962,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/simple_pdw_pipeline/" class="md-nav__link ">
+            <a href="../../applications/simple_pdw_pipeline/" class="md-nav__link ">
               
   
   
@@ -1031,7 +1021,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/body_pose_estimation/" class="md-nav__link ">
+            <a href="../../applications/body_pose_estimation/" class="md-nav__link ">
               
   
   
@@ -1090,7 +1080,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/colonoscopy_segmentation/" class="md-nav__link ">
+            <a href="../../applications/colonoscopy_segmentation/" class="md-nav__link ">
               
   
   
@@ -1149,7 +1139,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/cuda_quantum/" class="md-nav__link ">
+            <a href="../../applications/cuda_quantum/" class="md-nav__link ">
               
   
   
@@ -1253,7 +1243,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/dds/dds_video/" class="md-nav__link ">
+            <a href="../../applications/dds/dds_video/" class="md-nav__link ">
               
   
   
@@ -1320,7 +1310,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/deltacast_transmitter/" class="md-nav__link ">
+            <a href="../../applications/deltacast_transmitter/" class="md-nav__link ">
               
   
   
@@ -1379,7 +1369,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/depth_anything_v2/" class="md-nav__link ">
+            <a href="../../applications/depth_anything_v2/" class="md-nav__link ">
               
   
   
@@ -1532,7 +1522,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/distributed/grpc/grpc_endoscopy_tool_tracking/" class="md-nav__link ">
+            <a href="../../applications/distributed/grpc/grpc_endoscopy_tool_tracking/" class="md-nav__link ">
               
   
   
@@ -1591,7 +1581,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/distributed/grpc/grpc_h264_endoscopy_tool_tracking/" class="md-nav__link ">
+            <a href="../../applications/distributed/grpc/grpc_h264_endoscopy_tool_tracking/" class="md-nav__link ">
               
   
   
@@ -1705,7 +1695,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/distributed/ucx/ucx_h264_endoscopy_tool_tracking/" class="md-nav__link ">
+            <a href="../../applications/distributed/ucx/ucx_h264_endoscopy_tool_tracking/" class="md-nav__link ">
               
   
   
@@ -1811,7 +1801,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/distributed/ucx/ucx_endoscopy_tool_tracking/cpp/" class="md-nav__link ">
+            <a href="../../applications/distributed/ucx/ucx_endoscopy_tool_tracking/cpp/" class="md-nav__link ">
               
   
   
@@ -1870,7 +1860,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/distributed/ucx/ucx_endoscopy_tool_tracking/python/" class="md-nav__link ">
+            <a href="../../applications/distributed/ucx/ucx_endoscopy_tool_tracking/python/" class="md-nav__link ">
               
   
   
@@ -2000,7 +1990,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/ehr_query_llm/lmm/" class="md-nav__link ">
+            <a href="../../applications/ehr_query_llm/lmm/" class="md-nav__link ">
               
   
   
@@ -2059,7 +2049,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/ehr_query_llm/fhir/" class="md-nav__link ">
+            <a href="../../applications/ehr_query_llm/fhir/" class="md-nav__link ">
               
   
   
@@ -2126,7 +2116,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/endoscopy_depth_estimation/" class="md-nav__link ">
+            <a href="../../applications/endoscopy_depth_estimation/" class="md-nav__link ">
               
   
   
@@ -2232,7 +2222,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/endoscopy_out_of_body_detection/cpp/" class="md-nav__link ">
+            <a href="../../applications/endoscopy_out_of_body_detection/cpp/" class="md-nav__link ">
               
   
   
@@ -2291,7 +2281,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/endoscopy_out_of_body_detection/python/" class="md-nav__link ">
+            <a href="../../applications/endoscopy_out_of_body_detection/python/" class="md-nav__link ">
               
   
   
@@ -2358,7 +2348,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/monai_endoscopic_tool_seg/" class="md-nav__link ">
+            <a href="../../applications/monai_endoscopic_tool_seg/" class="md-nav__link ">
               
   
   
@@ -2464,7 +2454,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/endoscopy_tool_tracking/cpp/" class="md-nav__link ">
+            <a href="../../applications/endoscopy_tool_tracking/cpp/" class="md-nav__link ">
               
   
   
@@ -2523,7 +2513,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/endoscopy_tool_tracking/python/" class="md-nav__link ">
+            <a href="../../applications/endoscopy_tool_tracking/python/" class="md-nav__link ">
               
   
   
@@ -2590,7 +2580,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/florence-2-vision/" class="md-nav__link ">
+            <a href="../../applications/florence-2-vision/" class="md-nav__link ">
               
   
   
@@ -2649,7 +2639,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/fm_asr/" class="md-nav__link ">
+            <a href="../../applications/fm_asr/" class="md-nav__link ">
               
   
   
@@ -2708,7 +2698,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/orthorectification_with_optix/" class="md-nav__link ">
+            <a href="../../applications/orthorectification_with_optix/" class="md-nav__link ">
               
   
   
@@ -2814,7 +2804,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/h264/h264_endoscopy_tool_tracking/" class="md-nav__link ">
+            <a href="../../applications/h264/h264_endoscopy_tool_tracking/" class="md-nav__link ">
               
   
   
@@ -2873,7 +2863,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/h264/h264_video_decode/" class="md-nav__link ">
+            <a href="../../applications/h264/h264_video_decode/" class="md-nav__link ">
               
   
   
@@ -2987,7 +2977,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/high_speed_endoscopy/cpp/" class="md-nav__link ">
+            <a href="../../applications/high_speed_endoscopy/cpp/" class="md-nav__link ">
               
   
   
@@ -3046,7 +3036,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/high_speed_endoscopy/python/" class="md-nav__link ">
+            <a href="../../applications/high_speed_endoscopy/python/" class="md-nav__link ">
               
   
   
@@ -3113,7 +3103,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/holochat/" class="md-nav__link ">
+            <a href="../../applications/holochat/" class="md-nav__link ">
               
   
   
@@ -3225,7 +3215,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/holoviz/holoviz_hdr/" class="md-nav__link ">
+            <a href="../../applications/holoviz/holoviz_hdr/" class="md-nav__link ">
               
   
   
@@ -3284,7 +3274,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/holoviz/holoviz_srgb/" class="md-nav__link ">
+            <a href="../../applications/holoviz/holoviz_srgb/" class="md-nav__link ">
               
   
   
@@ -3343,7 +3333,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/holoviz/holoviz_ui/" class="md-nav__link ">
+            <a href="../../applications/holoviz/holoviz_ui/" class="md-nav__link ">
               
   
   
@@ -3402,7 +3392,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/holoviz/holoviz_vsync/" class="md-nav__link ">
+            <a href="../../applications/holoviz/holoviz_vsync/" class="md-nav__link ">
               
   
   
@@ -3461,7 +3451,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/holoviz/holoviz_yuv/" class="md-nav__link ">
+            <a href="../../applications/holoviz/holoviz_yuv/" class="md-nav__link ">
               
   
   
@@ -3528,7 +3518,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/hyperspectral_segmentation/" class="md-nav__link ">
+            <a href="../../applications/hyperspectral_segmentation/" class="md-nav__link ">
               
   
   
@@ -3587,7 +3577,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/imaging_ai_segmentator/" class="md-nav__link ">
+            <a href="../../applications/imaging_ai_segmentator/" class="md-nav__link ">
               
   
   
@@ -3646,7 +3636,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/realsense_visualizer/" class="md-nav__link ">
+            <a href="../../applications/realsense_visualizer/" class="md-nav__link ">
               
   
   
@@ -3754,7 +3744,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/laser_detection_latency/evt_cam_calibration/" class="md-nav__link ">
+            <a href="../../applications/laser_detection_latency/evt_cam_calibration/" class="md-nav__link ">
               
   
   
@@ -3813,7 +3803,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/laser_detection_latency/laser_detection/" class="md-nav__link ">
+            <a href="../../applications/laser_detection_latency/laser_detection/" class="md-nav__link ">
               
   
   
@@ -3872,7 +3862,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/laser_detection_latency/usb_cam_calibration/" class="md-nav__link ">
+            <a href="../../applications/laser_detection_latency/usb_cam_calibration/" class="md-nav__link ">
               
   
   
@@ -3986,7 +3976,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/matlab_gpu_coder/matlab_image_processing/" class="md-nav__link ">
+            <a href="../../applications/matlab_gpu_coder/matlab_image_processing/" class="md-nav__link ">
               
   
   
@@ -4045,7 +4035,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/matlab_gpu_coder/matlab_beamform/" class="md-nav__link ">
+            <a href="../../applications/matlab_gpu_coder/matlab_beamform/" class="md-nav__link ">
               
   
   
@@ -4116,7 +4106,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/" class="md-nav__link ">
               
   
   
@@ -4225,7 +4215,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/operators/XrFrameOp/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/operators/XrFrameOp/" class="md-nav__link ">
               
   
   
@@ -4281,7 +4271,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/operators/XrFrameOp/convert_depth/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/operators/XrFrameOp/convert_depth/" class="md-nav__link ">
               
   
   
@@ -4340,7 +4330,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/operators/XrFrameOp/begin_frame/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/operators/XrFrameOp/begin_frame/" class="md-nav__link ">
               
   
   
@@ -4399,7 +4389,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/operators/XrFrameOp/end_frame/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/operators/XrFrameOp/end_frame/" class="md-nav__link ">
               
   
   
@@ -4470,7 +4460,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/operators/XrTransformOp/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/operators/XrTransformOp/" class="md-nav__link ">
               
   
   
@@ -4526,7 +4516,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/operators/XrTransformOp/XrTransformControlOp/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/operators/XrTransformOp/XrTransformControlOp/" class="md-nav__link ">
               
   
   
@@ -4585,7 +4575,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/operators/XrTransformOp/XrTransformRenderOp/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/operators/XrTransformOp/XrTransformRenderOp/" class="md-nav__link ">
               
   
   
@@ -4707,7 +4697,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/utils/xr_hello_holoscan/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/utils/xr_hello_holoscan/" class="md-nav__link ">
               
   
   
@@ -4763,7 +4753,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering_xr/utils/xr_hello_holoscan/xr_basic_render/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering_xr/utils/xr_hello_holoscan/xr_basic_render/" class="md-nav__link ">
               
   
   
@@ -4846,7 +4836,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/multiai_endoscopy/" class="md-nav__link ">
+            <a href="../../applications/multiai_endoscopy/" class="md-nav__link ">
               
   
   
@@ -4954,7 +4944,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/multiai_ultrasound/cpp/" class="md-nav__link ">
+            <a href="../../applications/multiai_ultrasound/cpp/" class="md-nav__link ">
               
   
   
@@ -5013,7 +5003,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/multiai_ultrasound/python/" class="md-nav__link ">
+            <a href="../../applications/multiai_ultrasound/python/" class="md-nav__link ">
               
   
   
@@ -5117,7 +5107,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/multiai_ultrasound/operators/visualizer_icardio/" class="md-nav__link ">
+            <a href="../../applications/multiai_ultrasound/operators/visualizer_icardio/" class="md-nav__link ">
               
   
   
@@ -5241,7 +5231,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/nvidia_nim/nvidia_nim_chat/" class="md-nav__link ">
+            <a href="../../applications/nvidia_nim/nvidia_nim_chat/" class="md-nav__link ">
               
   
   
@@ -5300,7 +5290,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/nvidia_nim/nvidia_nim_imaging/" class="md-nav__link ">
+            <a href="../../applications/nvidia_nim/nvidia_nim_imaging/" class="md-nav__link ">
               
   
   
@@ -5359,7 +5349,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/nvidia_nim/nvidia_nim_nvclip/" class="md-nav__link ">
+            <a href="../../applications/nvidia_nim/nvidia_nim_nvclip/" class="md-nav__link ">
               
   
   
@@ -5426,7 +5416,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/object_detection_torch/" class="md-nav__link ">
+            <a href="../../applications/object_detection_torch/" class="md-nav__link ">
               
   
   
@@ -5485,7 +5475,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/openigtlink_3dslicer/" class="md-nav__link ">
+            <a href="../../applications/openigtlink_3dslicer/" class="md-nav__link ">
               
   
   
@@ -5593,7 +5583,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/orsi/orsi_in_out_body/" class="md-nav__link ">
+            <a href="../../applications/orsi/orsi_in_out_body/" class="md-nav__link ">
               
   
   
@@ -5652,7 +5642,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/orsi/orsi_multi_ai_ar/" class="md-nav__link ">
+            <a href="../../applications/orsi/orsi_multi_ai_ar/" class="md-nav__link ">
               
   
   
@@ -5711,7 +5701,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/orsi/orsi_segmentation_ar/" class="md-nav__link ">
+            <a href="../../applications/orsi/orsi_segmentation_ar/" class="md-nav__link ">
               
   
   
@@ -5778,7 +5768,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/cunumeric_integration/" class="md-nav__link ">
+            <a href="../../applications/cunumeric_integration/" class="md-nav__link ">
               
   
   
@@ -5837,7 +5827,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/prohawk_video_replayer/" class="md-nav__link ">
+            <a href="../../applications/prohawk_video_replayer/" class="md-nav__link ">
               
   
   
@@ -5896,7 +5886,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/pva_video_filter/" class="md-nav__link ">
+            <a href="../../applications/pva_video_filter/" class="md-nav__link ">
               
   
   
@@ -5955,7 +5945,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/qt_video_replayer/" class="md-nav__link ">
+            <a href="../../applications/qt_video_replayer/" class="md-nav__link ">
               
   
   
@@ -6014,7 +6004,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/network_radar_pipeline/" class="md-nav__link ">
+            <a href="../../applications/network_radar_pipeline/" class="md-nav__link ">
               
   
   
@@ -6073,7 +6063,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/video_deidentification/" class="md-nav__link ">
+            <a href="../../applications/video_deidentification/" class="md-nav__link ">
               
   
   
@@ -6132,7 +6122,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/asr_to_llm/" class="md-nav__link ">
+            <a href="../../applications/asr_to_llm/" class="md-nav__link ">
               
   
   
@@ -6191,7 +6181,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/sam2/" class="md-nav__link ">
+            <a href="../../applications/sam2/" class="md-nav__link ">
               
   
   
@@ -6250,7 +6240,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/cvcuda_basic/" class="md-nav__link ">
+            <a href="../../applications/cvcuda_basic/" class="md-nav__link ">
               
   
   
@@ -6356,7 +6346,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/simple_radar_pipeline/cpp/" class="md-nav__link ">
+            <a href="../../applications/simple_radar_pipeline/cpp/" class="md-nav__link ">
               
   
   
@@ -6415,7 +6405,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/simple_radar_pipeline/python/" class="md-nav__link ">
+            <a href="../../applications/simple_radar_pipeline/python/" class="md-nav__link ">
               
   
   
@@ -6482,7 +6472,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/sdr_fm_demodulation/" class="md-nav__link ">
+            <a href="../../applications/sdr_fm_demodulation/" class="md-nav__link ">
               
   
   
@@ -6541,7 +6531,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/speech_to_text_llm/" class="md-nav__link ">
+            <a href="../../applications/speech_to_text_llm/" class="md-nav__link ">
               
   
   
@@ -6600,7 +6590,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/ssd_detection_endoscopy_tools/" class="md-nav__link ">
+            <a href="../../applications/ssd_detection_endoscopy_tools/" class="md-nav__link ">
               
   
   
@@ -6659,7 +6649,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/stereo_vision/" class="md-nav__link ">
+            <a href="../../applications/stereo_vision/" class="md-nav__link ">
               
   
   
@@ -6718,7 +6708,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/synthetic_aperture_radar/" class="md-nav__link ">
+            <a href="../../applications/synthetic_aperture_radar/" class="md-nav__link ">
               
   
   
@@ -6777,7 +6767,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/tao_peoplenet/" class="md-nav__link ">
+            <a href="../../applications/tao_peoplenet/" class="md-nav__link ">
               
   
   
@@ -6883,7 +6873,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/ultrasound_segmentation/cpp/" class="md-nav__link ">
+            <a href="../../applications/ultrasound_segmentation/cpp/" class="md-nav__link ">
               
   
   
@@ -6942,7 +6932,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/ultrasound_segmentation/python/" class="md-nav__link ">
+            <a href="../../applications/ultrasound_segmentation/python/" class="md-nav__link ">
               
   
   
@@ -7009,7 +6999,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/velodyne_lidar_app/" class="md-nav__link ">
+            <a href="../../applications/velodyne_lidar_app/" class="md-nav__link ">
               
   
   
@@ -7068,7 +7058,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/vila_live/" class="md-nav__link ">
+            <a href="../../applications/vila_live/" class="md-nav__link ">
               
   
   
@@ -7129,7 +7119,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/psd_pipeline/" class="md-nav__link ">
+            <a href="../../applications/psd_pipeline/" class="md-nav__link ">
               
   
   
@@ -7185,7 +7175,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/psd_pipeline/data_writer/" class="md-nav__link ">
+            <a href="../../applications/psd_pipeline/data_writer/" class="md-nav__link ">
               
   
   
@@ -7252,7 +7242,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/volume_rendering/" class="md-nav__link ">
+            <a href="../../applications/volume_rendering/" class="md-nav__link ">
               
   
   
@@ -7311,7 +7301,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/vpi_stereo/" class="md-nav__link ">
+            <a href="../../applications/vpi_stereo/" class="md-nav__link ">
               
   
   
@@ -7370,7 +7360,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/webrtc_holoviz_server/" class="md-nav__link ">
+            <a href="../../applications/webrtc_holoviz_server/" class="md-nav__link ">
               
   
   
@@ -7429,7 +7419,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/webrtc_video_client/" class="md-nav__link ">
+            <a href="../../applications/webrtc_video_client/" class="md-nav__link ">
               
   
   
@@ -7488,7 +7478,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/webrtc_video_server/" class="md-nav__link ">
+            <a href="../../applications/webrtc_video_server/" class="md-nav__link ">
               
   
   
@@ -7547,7 +7537,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/xr_holoviz/" class="md-nav__link ">
+            <a href="../../applications/xr_holoviz/" class="md-nav__link ">
               
   
   
@@ -7606,7 +7596,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="applications/yolo_model_deployment/" class="md-nav__link ">
+            <a href="../../applications/yolo_model_deployment/" class="md-nav__link ">
               
   
   
@@ -7744,7 +7734,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/" class="md-nav__link ">
+            <a href="../../operators/" class="md-nav__link ">
               
   
   
@@ -7800,7 +7790,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/advanced_network/" class="md-nav__link ">
+            <a href="../../operators/advanced_network/" class="md-nav__link ">
               
   
   
@@ -7859,7 +7849,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/aja_source/" class="md-nav__link ">
+            <a href="../../operators/aja_source/" class="md-nav__link ">
               
   
   
@@ -7918,7 +7908,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/apriltag_detector/" class="md-nav__link ">
+            <a href="../../operators/apriltag_detector/" class="md-nav__link ">
               
   
   
@@ -7977,7 +7967,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/basic_network/" class="md-nav__link ">
+            <a href="../../operators/basic_network/" class="md-nav__link ">
               
   
   
@@ -8036,7 +8026,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/cvcuda_holoscan_interop/" class="md-nav__link ">
+            <a href="../../operators/cvcuda_holoscan_interop/" class="md-nav__link ">
               
   
   
@@ -8144,7 +8134,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/dds/base/" class="md-nav__link ">
+            <a href="../../operators/dds/base/" class="md-nav__link ">
               
   
   
@@ -8203,7 +8193,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/dds/dds_shapes_subscriber/" class="md-nav__link ">
+            <a href="../../operators/dds/dds_shapes_subscriber/" class="md-nav__link ">
               
   
   
@@ -8262,7 +8252,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/dds/video/" class="md-nav__link ">
+            <a href="../../operators/dds/video/" class="md-nav__link ">
               
   
   
@@ -8374,7 +8364,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/deidentification/pixelator/" class="md-nav__link ">
+            <a href="../../operators/deidentification/pixelator/" class="md-nav__link ">
               
   
   
@@ -8441,7 +8431,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/ehr_query_llm/" class="md-nav__link ">
+            <a href="../../operators/ehr_query_llm/" class="md-nav__link ">
               
   
   
@@ -8500,7 +8490,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/emergent_source/" class="md-nav__link ">
+            <a href="../../operators/emergent_source/" class="md-nav__link ">
               
   
   
@@ -8559,7 +8549,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/fft/" class="md-nav__link ">
+            <a href="../../operators/fft/" class="md-nav__link ">
               
   
   
@@ -8618,7 +8608,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/grpc_operators/" class="md-nav__link ">
+            <a href="../../operators/grpc_operators/" class="md-nav__link ">
               
   
   
@@ -8677,7 +8667,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/xr/" class="md-nav__link ">
+            <a href="../../operators/xr/" class="md-nav__link ">
               
   
   
@@ -8736,7 +8726,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/high_rate_psd/" class="md-nav__link ">
+            <a href="../../operators/high_rate_psd/" class="md-nav__link ">
               
   
   
@@ -8795,7 +8785,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/realsense_camera/" class="md-nav__link ">
+            <a href="../../operators/realsense_camera/" class="md-nav__link ">
               
   
   
@@ -8854,7 +8844,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/low_rate_psd/" class="md-nav__link ">
+            <a href="../../operators/low_rate_psd/" class="md-nav__link ">
               
   
   
@@ -8913,7 +8903,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/lstm_tensor_rt_inference/" class="md-nav__link ">
+            <a href="../../operators/lstm_tensor_rt_inference/" class="md-nav__link ">
               
   
   
@@ -8972,7 +8962,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/medical_imaging/" class="md-nav__link ">
+            <a href="../../operators/medical_imaging/" class="md-nav__link ">
               
   
   
@@ -9031,7 +9021,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/mesh_to_usd/" class="md-nav__link ">
+            <a href="../../operators/mesh_to_usd/" class="md-nav__link ">
               
   
   
@@ -9090,7 +9080,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/npp_filter/" class="md-nav__link ">
+            <a href="../../operators/npp_filter/" class="md-nav__link ">
               
   
   
@@ -9200,7 +9190,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/orsi/orsi_format_converter/" class="md-nav__link ">
+            <a href="../../operators/orsi/orsi_format_converter/" class="md-nav__link ">
               
   
   
@@ -9259,7 +9249,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/orsi/orsi_segmentation_postprocessor/" class="md-nav__link ">
+            <a href="../../operators/orsi/orsi_segmentation_postprocessor/" class="md-nav__link ">
               
   
   
@@ -9318,7 +9308,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/orsi/orsi_segmentation_preprocessor/" class="md-nav__link ">
+            <a href="../../operators/orsi/orsi_segmentation_preprocessor/" class="md-nav__link ">
               
   
   
@@ -9377,7 +9367,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/orsi/orsi_visualizer/" class="md-nav__link ">
+            <a href="../../operators/orsi/orsi_visualizer/" class="md-nav__link ">
               
   
   
@@ -9444,7 +9434,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/openigtlink/" class="md-nav__link ">
+            <a href="../../operators/openigtlink/" class="md-nav__link ">
               
   
   
@@ -9503,7 +9493,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/prohawk_video_processing/" class="md-nav__link ">
+            <a href="../../operators/prohawk_video_processing/" class="md-nav__link ">
               
   
   
@@ -9562,7 +9552,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/qt_video/" class="md-nav__link ">
+            <a href="../../operators/qt_video/" class="md-nav__link ">
               
   
   
@@ -9621,7 +9611,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/tensor_to_video_buffer/" class="md-nav__link ">
+            <a href="../../operators/tensor_to_video_buffer/" class="md-nav__link ">
               
   
   
@@ -9680,7 +9670,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/tool_tracking_postprocessor/" class="md-nav__link ">
+            <a href="../../operators/tool_tracking_postprocessor/" class="md-nav__link ">
               
   
   
@@ -9739,7 +9729,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/unzip/" class="md-nav__link ">
+            <a href="../../operators/unzip/" class="md-nav__link ">
               
   
   
@@ -9843,7 +9833,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/velodyne_lidar/cpp/" class="md-nav__link ">
+            <a href="../../operators/velodyne_lidar/cpp/" class="md-nav__link ">
               
   
   
@@ -9955,7 +9945,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/video_encoder/video_encoder_request/" class="md-nav__link ">
+            <a href="../../operators/video_encoder/video_encoder_request/" class="md-nav__link ">
               
   
   
@@ -10022,7 +10012,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/deltacast_videomaster/" class="md-nav__link ">
+            <a href="../../operators/deltacast_videomaster/" class="md-nav__link ">
               
   
   
@@ -10081,7 +10071,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/vita49_psd_packetizer/" class="md-nav__link ">
+            <a href="../../operators/vita49_psd_packetizer/" class="md-nav__link ">
               
   
   
@@ -10140,7 +10130,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/volume_loader/" class="md-nav__link ">
+            <a href="../../operators/volume_loader/" class="md-nav__link ">
               
   
   
@@ -10199,7 +10189,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/volume_renderer/" class="md-nav__link ">
+            <a href="../../operators/volume_renderer/" class="md-nav__link ">
               
   
   
@@ -10258,7 +10248,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/vtk_renderer/" class="md-nav__link ">
+            <a href="../../operators/vtk_renderer/" class="md-nav__link ">
               
   
   
@@ -10317,7 +10307,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/webrtc_client/" class="md-nav__link ">
+            <a href="../../operators/webrtc_client/" class="md-nav__link ">
               
   
   
@@ -10376,7 +10366,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/webrtc_server/" class="md-nav__link ">
+            <a href="../../operators/webrtc_server/" class="md-nav__link ">
               
   
   
@@ -10435,7 +10425,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="operators/yuan_qcap/" class="md-nav__link ">
+            <a href="../../operators/yuan_qcap/" class="md-nav__link ">
               
   
   
@@ -10477,6 +10467,8 @@
       
   
   
+    
+  
   
   
     
@@ -10518,18 +10510,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -10542,13 +10537,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -10587,7 +10582,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/high_performance_networking/" class="md-nav__link ">
+            <a href="../high_performance_networking/" class="md-nav__link ">
               
   
   
@@ -10622,7 +10617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/high_performance_networking/0.1/" class="md-nav__link">
+      <a href="../high_performance_networking/0.1/" class="md-nav__link">
         
   
   
@@ -10674,7 +10669,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/gui_for_python_applications/" class="md-nav__link ">
+            <a href="../gui_for_python_applications/" class="md-nav__link ">
               
   
   
@@ -10733,7 +10728,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/creating-multi-node-applications/" class="md-nav__link ">
+            <a href="../creating-multi-node-applications/" class="md-nav__link ">
               
   
   
@@ -10792,7 +10787,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/cuda_mps/" class="md-nav__link ">
+            <a href="../cuda_mps/" class="md-nav__link ">
               
   
   
@@ -10898,7 +10893,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/debugging/cli_debugging/" class="md-nav__link ">
+            <a href="../debugging/cli_debugging/" class="md-nav__link ">
               
   
   
@@ -10957,7 +10952,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/debugging/holoscan_container_vscode/" class="md-nav__link ">
+            <a href="../debugging/holoscan_container_vscode/" class="md-nav__link ">
               
   
   
@@ -11024,7 +11019,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/local-llama/" class="md-nav__link ">
+            <a href="../local-llama/" class="md-nav__link ">
               
   
   
@@ -11083,7 +11078,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/dicom_to_usd_with_monai_and_holoscan/" class="md-nav__link ">
+            <a href="../dicom_to_usd_with_monai_and_holoscan/" class="md-nav__link ">
               
   
   
@@ -11142,7 +11137,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/gpu_direct_storage_on_holoscan/" class="md-nav__link ">
+            <a href="../gpu_direct_storage_on_holoscan/" class="md-nav__link ">
               
   
   
@@ -11201,7 +11196,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/holoscan-playground-on-aws/" class="md-nav__link ">
+            <a href="../holoscan-playground-on-aws/" class="md-nav__link ">
               
   
   
@@ -11260,7 +11255,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/holoscan_response_time_analysis/" class="md-nav__link ">
+            <a href="../holoscan_response_time_analysis/" class="md-nav__link ">
               
   
   
@@ -11295,6 +11290,8 @@
                 
   
   
+    
+  
   
   
     
@@ -11311,15 +11308,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/integrate_external_libs_into_pipeline/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -11333,7 +11330,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_12">
             <span class="md-nav__icon md-icon"></span>
             Integrate External Libraries into a Holoscan Pipeline
@@ -11378,7 +11375,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/windows_vm/" class="md-nav__link ">
+            <a href="../windows_vm/" class="md-nav__link ">
               
   
   
@@ -11437,7 +11434,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/holoscan-bootcamp/" class="md-nav__link ">
+            <a href="../holoscan-bootcamp/" class="md-nav__link ">
               
   
   
@@ -11541,7 +11538,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tutorials/pretrained_foundational_models/self_supervised_training/" class="md-nav__link ">
+            <a href="../pretrained_foundational_models/self_supervised_training/" class="md-nav__link ">
               
   
   
@@ -11623,7 +11620,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="benchmarks/" class="md-nav__link ">
+            <a href="../../benchmarks/" class="md-nav__link ">
               
   
   
@@ -11679,7 +11676,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="benchmarks/exclusive_display/" class="md-nav__link ">
+            <a href="../../benchmarks/exclusive_display/" class="md-nav__link ">
               
   
   
@@ -11738,7 +11735,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="benchmarks/holoscan_flow_benchmarking/" class="md-nav__link ">
+            <a href="../../benchmarks/holoscan_flow_benchmarking/" class="md-nav__link ">
               
   
   
@@ -11797,7 +11794,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="benchmarks/release_benchmarking/" class="md-nav__link ">
+            <a href="../../benchmarks/release_benchmarking/" class="md-nav__link ">
               
   
   
@@ -11856,7 +11853,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="benchmarks/model_benchmarking/" class="md-nav__link ">
+            <a href="../../benchmarks/model_benchmarking/" class="md-nav__link ">
               
   
   
@@ -11902,8 +11899,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -11918,6 +11913,335 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interoperability-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interoperability Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interoperability Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dlpack-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      DLPack Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-interface-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array Interface Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda-array-interfacedlpack-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      CUDA Array Interface/DLPack Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-holoscan-tensors-in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Holoscan Tensors in Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-interoperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tensor Interoperability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tensor Interoperability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integrate-matx-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate MatX library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate MatX library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-rapids-cucim-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate RAPIDS cuCIM library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate RAPIDS cuCIM library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-cv-cuda-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate CV-CUDA library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate CV-CUDA library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-code_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-opencv-with-cuda-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate OpenCV with CUDA Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate OpenCV with CUDA Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-code_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-pytorch-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate PyTorch library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate PyTorch library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-code_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuda-interoperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      CUDA Interoperability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CUDA Interoperability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integrate-cuda-python-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate CUDA Python library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate CUDA Python library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-code_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-cupy-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate CuPy library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate CuPy library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-code_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -11929,73 +12253,488 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <a href="../../tags/#tag:cv-cuda" class="md-tag">CV CUDA</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:holoscan" class="md-tag">Holoscan</a>
+      
+    
+      
+      
+      
+        <a href="../../tags/#tag:opencv" class="md-tag">OpenCV</a>
+      
+    
+  </nav>
 
 
 
-
-<!-- Hide the site name in the header when scrolled to the top
-to avoid redundancy with the page title -->
-<style>
-  /* Hide site/page name text when the title container is not 'active' by making it transparent */
-  .md-header__title:not(.md-header__title--active) .md-header__topic {
-    opacity: 0;
-  }
-
-  /* Override default transition: fade-in only, no slide */
-  .md-header__topic {
-    transition: opacity 0.2s ease !important;
-    transform: none !important;
-  }
-
-  /* Hide the permalink anchor within the page title (from mkdocs / toc / permalink: true) */
-  .md-content h1 > a.headerlink {
-    display: none;
-  }
-</style>
-
-<!-- We need it despite 'title:' above or the .nav title value ('Home') would be used-->
-<h1 id="holoscan-reference-applications">Holoscan Reference Applications<a class="headerlink" href="#holoscan-reference-applications" title="Permanent link">#</a></h1>
-<p><strong>Holoscan Reference Applications</strong> is a central repository for the <a href="https://www.nvidia.com/en-us/clara/holoscan/">NVIDIA Holoscan</a> AI sensor processing community
-to share reference applications, operators, tutorials and benchmarks.
-The repository hosts a variety of applications that demonstrate how to use Holoscan for streaming, imaging, and other AI-driven tasks across embedded, edge, and cloud environments. These applications serve as reference implementations, providing developers with examples of best practices and efficient coding techniques to build high-performance, low-latency AI applications. The repository is open to contributions from the community, encouraging developers to share their own applications and extensions to enhance the Holoscan ecosystem.</p>
-<div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8 17 4-4h3.2c.4 1.2 1.5 2 2.8 2 1.7 0 3-1.3 3-3s-1.3-3-3-3c-1.3 0-2.4.8-2.8 2H12L8 7V3H3v5h3l4.2 4L6 16H3v5h5z"/></svg></span> <strong>Workflows</strong> (1)</p>
-<hr />
-<p>Reference workflows demonstrate how capabilities from applications and operators can be combined
-to achieve complex tasks.</p>
-<p><a class="md-button md-button" href="workflows/">Browse Workflows</a></p>
-</li>
-<li>
-<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 20h4v-4h-4m0-2h4v-4h-4m-6-2h4V4h-4m6 4h4V4h-4m-6 10h4v-4h-4m-6 4h4v-4H4m0 10h4v-4H4m6 4h4v-4h-4M4 8h4V4H4z"/></svg></span> <strong>Applications</strong> (79)</p>
-<hr />
-<p>Reference applications demonstrate a specific capability of Holoscan or how a specific operator
-can be used to perform an optimize task.</p>
-<p><a class="md-button md-button" href="applications/">Browse Applications</a></p>
-</li>
-<li>
-<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg></span> <strong>Operators</strong> (42)</p>
-<hr />
-<p>Operators perform a specific task.</p>
-<p><a class="md-button md-button" href="operators/">Browse Operators</a></p>
-</li>
-<li>
-<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5m-1-14c-1.36-.6-3.16-1-4.5-1-1.2 0-2.4.15-3.5.5v11.5c1.1-.35 2.3-.5 3.5-.5 1.34 0 3.14.4 4.5 1zM13 19c1.36-.6 3.16-1 4.5-1 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.34 0-3.14.4-4.5 1zm1-2.65c.96-.35 2.12-.52 3.5-.52 1.04 0 1.88.08 2.5.24v-1.5a13.9 13.9 0 0 0-6 .19zm0-2.66c.96-.35 2.12-.53 3.5-.53 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23-1.28 0-2.45.15-3.5.45zM14 11c.96-.33 2.12-.5 3.5-.5.91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23-1.32 0-2.5.15-3.5.46z"/></svg></span> <strong>Tutorials</strong> (15)</p>
-<hr />
-<p>Tutorials provide hands-on experience.</p>
-<p><a class="md-button md-button" href="tutorials/">Browse Tutorials</a></p>
-</li>
-<li>
-<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 17H7v-7h2zm4 0h-2V7h2zm4 0h-2v-4h2zm2 2H5V5h14v14.1M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2"/></svg></span> <strong>Benchmarks</strong> (4)</p>
-<hr />
-<p>Benchmarks provide tools for assessing performance of Holoscan pipelines as well as reference benchmarks for specific releases</p>
-<p><a class="md-button md-button" href="benchmarks/">Browse Benchmarks</a></p>
-</li>
-</ul>
+<h1 id="best-practices-to-integrate-external-libraries-into-holoscan-pipelines"><a href="https://github.com/nvidia-holoscan/holohub/blob/main/tutorials/integrate_external_libs_into_pipeline">Best Practices to integrate external libraries into Holoscan pipelines</a><a class="headerlink" href="#best-practices-to-integrate-external-libraries-into-holoscan-pipelines" title="Permanent link">#</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5M8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0"/></svg></span> <strong>Authors:</strong> Meiran Peng (NVIDIA)<br><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.954 17H2.75A1.75 1.75 0 0 1 1 15.25V3.75C1 2.784 1.784 2 2.75 2h18.5c.966 0 1.75.784 1.75 1.75v11.5A1.75 1.75 0 0 1 21.25 17h-6.204c.171 1.375.805 2.652 1.769 3.757A.752.752 0 0 1 16.25 22h-8.5a.75.75 0 0 1-.565-1.243c.964-1.105 1.598-2.382 1.769-3.757M21.5 3.75a.25.25 0 0 0-.25-.25H2.75a.25.25 0 0 0-.25.25v11.5c0 .138.112.25.25.25h18.5a.25.25 0 0 0 .25-.25ZM13.537 17h-3.074c-.126 1.266-.564 2.445-1.223 3.5h5.52c-.659-1.055-1.098-2.234-1.223-3.5"/></svg></span> <strong>Supported platforms:</strong> x86_64, aarch64<br><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.3 8.24a.75.75 0 0 1-.04 1.06L7.352 12l2.908 2.7a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 0 1 1.06.04m3.44 1.06a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.908-2.7z"/><path d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v16.5A1.75 1.75 0 0 1 20.25 22H3.75A1.75 1.75 0 0 1 2 20.25Zm1.75-.25a.25.25 0 0 0-.25.25v16.5c0 .138.112.25.25.25h16.5a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25Z"/></svg></span> <strong>Language:</strong> Python<br><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.5 7.25a.75.75 0 0 0-1.5 0v5.5c0 .27.144.518.378.651l3.5 2a.75.75 0 0 0 .744-1.302L12.5 12.315z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1M2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12"/></svg></span> <strong>Last modified:</strong> May 13, 2025<br><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> <strong>Latest version:</strong> 0.1.0<br><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.063 1.456a1.75 1.75 0 0 1 1.874 0l8.383 5.316a1.75 1.75 0 0 1 0 2.956l-8.383 5.316a1.75 1.75 0 0 1-1.874 0L2.68 9.728a1.75 1.75 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z"/><path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.75 1.75 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035"/><path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.75 1.75 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035"/></svg></span> <strong>Minimum Holoscan SDK version:</strong> 0.6.0<br><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 8.807V3.5h-.563a.75.75 0 0 1 0-1.5h9.125a.75.75 0 0 1 0 1.5H16v5.307l5.125 9.301c.964 1.75-.302 3.892-2.299 3.892H5.174c-1.998 0-3.263-2.142-2.3-3.892ZM4.189 18.832a1.123 1.123 0 0 0 .985 1.668h13.652a1.123 1.123 0 0 0 .985-1.668L17.7 15H6.3ZM14.5 3.5h-5V9a.75.75 0 0 1-.093.362L7.127 13.5h9.746l-2.28-4.138A.75.75 0 0 1 14.5 9Z"/></svg></span> <strong>Tested Holoscan SDK versions:</strong> 0.6.0<br><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.296 1.924c.24-.656 1.168-.656 1.408 0l.717 1.958a11.25 11.25 0 0 0 6.697 6.697l1.958.717c.657.24.657 1.168 0 1.408l-1.958.717a11.25 11.25 0 0 0-6.697 6.697l-.717 1.958c-.24.657-1.168.657-1.408 0l-.717-1.958a11.25 11.25 0 0 0-6.697-6.697l-1.958-.717c-.656-.24-.656-1.168 0-1.408l1.958-.717a11.25 11.25 0 0 0 6.697-6.697z"/></svg></span> <strong>Contribution metric:</strong> Level 1 - Highly Reliable<br><br></p>
+<p>The Holoscan SDK is part of NVIDIA Holoscan, the AI sensor processing platform that combines hardware systems for low-latency sensor and network connectivity, optimized libraries for data processing and AI, and core microservices to run streaming, imaging, and other applications, from embedded to edge to cloud. It can be used to build streaming AI pipelines for a variety of domains, including medical devices, high-performance computing at the edge, industrial inspection, and more.</p>
+<p>With the Holoscan SDK, one can develop an end-to-end GPU-accelerated pipeline with RDMA support. However, with increasing requirements for pre-processing and post-processing beyond inference-only pipelines, integration with other powerful, GPU-accelerated libraries is needed.</p>
+<div align="center">
+<img src="https://github.com/nvidia-holoscan/holohub/blob/main/tutorials/integrate_external_libs_into_pipeline/images/typical_pipeline_holoscan.png?raw=true" style="border: 2px solid black;">
 </div>
 
+<p>One of the key features of the Holoscan SDK is its seamless interoperability with other libraries.</p>
+<p>This tutorial explains how to leverage this capability in your applications.
+For detailed examples of integrating various libraries with Holoscan applications, refer to the following sections:
+- Tensor Interoperability
+  - <a href="#integrate-matx-library">Integrate <strong>MatX</strong> library</a> - DLPack support in C++
+  - <a href="#integrate-rapids-cucim-library">Integrate RAPIDS <strong>cuCIM</strong> library</a>
+  - <a href="#integrate-cv-cuda-library">Integrate <strong>CV-CUDA</strong> library</a>
+  - <a href="#integrate-opencv-with-cuda-module">Integrate <strong>OpenCV with CUDA Module</strong></a>
+  - <a href="#integrate-pytorch-library">Integrate <strong>PyTorch</strong> library</a>
+- CUDA Interoperability
+  - <a href="#integrate-cuda-python-library">Integrate <strong>CUDA Python</strong> library</a>
+  - <a href="#integrate-cupy-library">Integrate <strong>CuPy</strong> library</a></p>
+<h2 id="interoperability-features">Interoperability Features<a class="headerlink" href="#interoperability-features" title="Permanent link">#</a></h2>
+<h3 id="dlpack-support">DLPack Support<a class="headerlink" href="#dlpack-support" title="Permanent link">#</a></h3>
+<p>The Holoscan SDK supports <a href="https://dmlc.github.io/dlpack/latest/">DLPack</a>, enabling efficient data exchange between deep learning frameworks.</p>
+<h3 id="array-interface-support">Array Interface Support<a class="headerlink" href="#array-interface-support" title="Permanent link">#</a></h3>
+<p>The SDK also supports the array interface, including:
+- <a href="https://numpy.org/doc/stable/reference/arrays.interface.html"><code>__array_interface__</code></a>
+- <a href="https://numba.readthedocs.io/en/stable/cuda/cuda_array_interface.html"><code>__cuda_array_interface__</code></a></p>
+<p>This allows for seamless integration with various Python libraries such as:
+- <a href="https://docs.cupy.dev/en/stable/user_guide/interoperability.html">CuPy</a>
+- <a href="https://github.com/pytorch/pytorch/issues/15601">PyTorch</a>
+- <a href="https://github.com/google/jax/issues/1100#issuecomment-580773098">JAX</a>
+- <a href="https://github.com/tensorflow/community/pull/180">TensorFlow</a>
+- <a href="https://numba.readthedocs.io/en/stable/cuda/cuda_array_interface.html">Numba</a></p>
+<h3 id="technical-details">Technical Details<a class="headerlink" href="#technical-details" title="Permanent link">#</a></h3>
+<p>The <code>Tensor</code> class is a wrapper around the <code>DLManagedTensorContext</code> struct, which holds the <code>DLManagedTensor</code> object (a <a href="https://dmlc.github.io/dlpack/latest/c_api.html#c.DLManagedTensor">DLPack structure</a>).</p>
+<p>For more information on interoperability, refer to the following sections in the Holoscan SDK documentation:
+- <a href="https://docs.nvidia.com/holoscan/sdk-user-guide/holoscan_create_operator.html#interoperability-between-gxf-and-native-c-operators">Interoperability between GXF and native C++ operators</a>
+- <a href="https://docs.nvidia.com/holoscan/sdk-user-guide/holoscan_create_operator.html#interoperability-between-wrapped-and-native-python-operators">Interoperability between wrapped and native Python operators</a></p>
+<h3 id="cuda-array-interfacedlpack-support">CUDA Array Interface/DLPack Support<a class="headerlink" href="#cuda-array-interfacedlpack-support" title="Permanent link">#</a></h3>
+<p>The following Python libraries have adopted the <a href="https://numba.readthedocs.io/en/stable/cuda/cuda_array_interface.html#interoperability">CUDA Array Interface</a> and/or <a href="https://dmlc.github.io/dlpack/latest/">DLPack</a> standards, enabling seamless interoperability with Holoscan Tensors:</p>
+<ul>
+<li><a href="https://docs-cupy.chainer.org/en/stable/reference/interoperability.html">CuPy</a></li>
+<li><a href="https://github.com/CVCUDA/CV-CUDA">CV-CUDA</a></li>
+<li><a href="https://pytorch.org/">PyTorch</a></li>
+<li><a href="https://numba.readthedocs.io/en/stable/user/5minguide.html">Numba</a></li>
+<li><a href="https://arrow.apache.org/docs/python/generated/pyarrow.cuda.Context.html#pyarrow.cuda.Context.buffer_from_object">PyArrow</a></li>
+<li><a href="https://mpi4py.readthedocs.io/en/latest/overview.html#support-for-cuda-aware-mpi">mpi4py</a></li>
+<li><a href="https://github.com/xnd-project/arrayviews">ArrayViews</a></li>
+<li><a href="https://jax.readthedocs.io/en/latest/index.html">JAX</a></li>
+<li><a href="https://documen.tician.de/pycuda/tutorial.html#interoperability-with-other-libraries-using-the-cuda-array-interface">PyCUDA</a></li>
+<li><a href="https://github.com/NVIDIA/DALI">DALI: the NVIDIA Data Loading Library</a> :</li>
+<li><a href="https://docs.nvidia.com/deeplearning/dali/user-guide/docs/data_types.html#nvidia.dali.backend.TensorGPU">TensorGPU objects</a> expose the CUDA Array Interface.</li>
+<li><a href="https://docs.nvidia.com/deeplearning/dali/user-guide/docs/supported_ops.html#nvidia.dali.fn.external_source">The External Source operator</a> consumes objects exporting the CUDA Array Interface.</li>
+<li>The RAPIDS stack:</li>
+<li><a href="https://github.com/rapidsai/cucim">cuCIM</a></li>
+<li><a href="https://docs.rapids.ai/api/cudf/stable/user_guide/10min/">cuDF</a></li>
+<li><a href="https://docs.rapids.ai/api/cuml/nightly/">cuML</a></li>
+<li><a href="https://github.com/rapidsai/cusignal">cuSignal</a></li>
+<li><a href="https://docs.rapids.ai/api/rmm/stable/guide/">RMM</a></li>
+</ul>
+<p>For more details on using the CUDA Array Interface and DLPack with various libraries, see <a href="https://docs.cupy.dev/en/stable/user_guide/interoperability.html#">CuPy's Interoperability guide</a>.</p>
+<h3 id="using-holoscan-tensors-in-python">Using Holoscan Tensors in Python<a class="headerlink" href="#using-holoscan-tensors-in-python" title="Permanent link">#</a></h3>
+<p>The Holoscan SDK's Python API provides the <code>holoscan.as_tensor()</code> method to convert objects supporting the (CUDA) Array Interface or DLPack to a Holoscan Tensor. The <code>holoscan.Tensor</code> object itself also supports these interfaces, allowing for easy integration with compatible libraries.</p>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">holoscan</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">hs</span>
+
+<span class="c1"># Create tensors using different libraries</span>
+<span class="n">torch_cpu_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">torch_gpu_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+<span class="n">numpy_tensor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">cupy_tensor</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+
+<span class="c1"># Convert to Holoscan Tensors</span>
+<span class="n">torch_cpu_to_holoscan</span> <span class="o">=</span> <span class="n">hs</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">torch_cpu_tensor</span><span class="p">)</span>
+<span class="n">torch_gpu_to_holoscan</span> <span class="o">=</span> <span class="n">hs</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">torch_gpu_tensor</span><span class="p">)</span>
+<span class="n">numpy_to_holoscan</span> <span class="o">=</span> <span class="n">hs</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">numpy_tensor</span><span class="p">)</span>
+<span class="n">cupy_to_holoscan</span> <span class="o">=</span> <span class="n">hs</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">cupy_tensor</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="tensor-interoperability">Tensor Interoperability<a class="headerlink" href="#tensor-interoperability" title="Permanent link">#</a></h2>
+<h3 id="integrate-matx-library">Integrate MatX library<a class="headerlink" href="#integrate-matx-library" title="Permanent link">#</a></h3>
+<p><a href="https://github.com/NVIDIA/MatX">MatX library (An efficient C++17 GPU numerical computing library with Python-like syntax)</a> is an open-source, efficient C++17 GPU numerical computing library created by NVIDIA. It provides a NumPy-like interface for GPU-accelerated numerical computing, enabling developers to write high-performance, GPU-accelerated code with ease.</p>
+<h4 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h4>
+<p>MatX is a header-only library. Using it in your own projects is as simple as including only the core <code>matx.h</code> file.</p>
+<p>Please refer to the <a href="https://nvidia.github.io/MatX/build.html">MatX documentation</a> for detailed instructions on building and using the MatX library.</p>
+<p>The following is a sample CMakeLists.txt file for a project that uses MatX:</p>
+<div class="highlight"><pre><span></span><code>cmake_minimum_required(VERSION 3.20)
+project(my_app CXX)
+
+# Holoscan
+find_package(holoscan 2.2 REQUIRED CONFIG
+             PATHS &quot;/opt/nvidia/holoscan&quot; &quot;/workspace/holoscan-sdk/install&quot;)
+
+# Enable cuda language
+set(CMAKE_CUDA_ARCHITECTURES &quot;70;80&quot;)
+enable_language(CUDA)
+
+# Download MatX (from &#39;main&#39; branch)
+include(FetchContent)
+FetchContent_Declare(
+  MatX
+  GIT_REPOSITORY https://github.com/NVIDIA/MatX.git
+  GIT_TAG main
+)
+FetchContent_MakeAvailable(MatX)
+
+add_executable(my_app
+  my_app.cpp
+)
+
+target_link_libraries(my_app
+  PRIVATE
+  holoscan::core
+  # ...
+  matx::matx
+)
+</code></pre></div>
+<h4 id="sample-code">Sample code<a class="headerlink" href="#sample-code" title="Permanent link">#</a></h4>
+<p>The following are the sample applications that use the MatX library to integrate with Holoscan SDK.</p>
+<ul>
+<li><a href="https://github.com/nvidia-holoscan/holohub/tree/main/applications/multiai_endoscopy">Multi AI Application with SSD Detection and MONAI Endoscopic Tool Segmentation</a></li>
+<li><code>applications/multiai_endoscopy</code></li>
+<li><a href="https://github.com/nvidia-holoscan/holohub/tree/main/applications/network_radar_pipeline/cpp">Network Radar Pipeline</a></li>
+<li><code>applications/network_radar_pipeline/cpp</code></li>
+<li><a href="https://github.com/nvidia-holoscan/holohub/tree/main/applications/simple_radar_pipeline/cpp">Simple Radar Pipeline Application</a></li>
+<li><code>applications/simple_radar_pipeline/cpp</code></li>
+</ul>
+<p><strong>On the GPU</strong></p>
+<ul>
+<li><a href="https://github.com/nvidia-holoscan/holohub/blob/main/applications/multiai_endoscopy/cpp/post-proc-matx-gpu/multi_ai.cu">https://github.com/nvidia-holoscan/holohub/blob/main/applications/multiai_endoscopy/cpp/post-proc-matx-gpu/multi_ai.cu</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;holoscan/holoscan.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;matx.h&gt;</span>
+
+<span class="c1">// ...</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="n">InputContext</span><span class="o">&amp;</span><span class="w"> </span><span class="n">op_input</span><span class="p">,</span><span class="w"> </span><span class="n">OutputContext</span><span class="o">&amp;</span><span class="w"> </span><span class="n">op_output</span><span class="p">,</span>
+<span class="w">             </span><span class="n">ExecutionContext</span><span class="o">&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Get input message and make output message</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">in_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op_input</span><span class="p">.</span><span class="n">receive</span><span class="o">&lt;</span><span class="n">gxf</span><span class="o">::</span><span class="n">Entity</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;in&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in_message</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">Tensor</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;inference_output_detection_boxes&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in_message</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">Tensor</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;inference_output_detection_scores&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">Nb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scores</span><span class="o">-&gt;</span><span class="n">shape</span><span class="p">()[</span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// Number of boxes</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">Nl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matx</span><span class="o">::</span><span class="n">make_tensor</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">({});</span><span class="w">  </span><span class="c1">// Number of label boxes</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxesl_mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matx</span><span class="o">::</span><span class="n">make_tensor</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Nl</span><span class="p">(),</span><span class="w"> </span><span class="mi">4</span><span class="p">});</span>
+<span class="w">  </span><span class="p">(</span><span class="n">boxesl_mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matx</span><span class="o">::</span><span class="n">remap</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">boxes_ix_mx</span><span class="p">,</span><span class="w"> </span><span class="n">ixl_mx</span><span class="p">)).</span><span class="n">run</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="c1">// Holoscan tensors to MatX tensors</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxes_mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matx</span><span class="o">::</span><span class="n">make_tensor</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">((</span><span class="kt">float</span><span class="o">*</span><span class="p">)</span><span class="n">boxes</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Nb</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">});</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="c1">// MatX to Holoscan tensor</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxes_hs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">holoscan</span><span class="o">::</span><span class="n">Tensor</span><span class="o">&gt;</span><span class="p">(</span><span class="n">boxesls_mx</span><span class="p">.</span><span class="n">GetDLPackTensor</span><span class="p">());</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>On the CPU</strong></p>
+<ul>
+<li><a href="https://github.com/nvidia-holoscan/holohub/blob/main/applications/multiai_endoscopy/cpp/post-proc-matx-cpu/multi_ai.cpp">https://github.com/nvidia-holoscan/holohub/blob/main/applications/multiai_endoscopy/cpp/post-proc-matx-cpu/multi_ai.cpp</a></li>
+</ul>
+<p>MatX library usage on the CPU is similar to the GPU version, but the <code>run()</code> function is called with <code>matx::SingleThreadHostExecutor()</code> to run the operation on the CPU.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;holoscan/holoscan.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;matx.h&gt;</span>
+
+<span class="c1">// ...</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="n">InputContext</span><span class="o">&amp;</span><span class="w"> </span><span class="n">op_input</span><span class="p">,</span><span class="w"> </span><span class="n">OutputContext</span><span class="o">&amp;</span><span class="w"> </span><span class="n">op_output</span><span class="p">,</span>
+<span class="w">             </span><span class="n">ExecutionContext</span><span class="o">&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Get input message and make output message</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">in_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op_input</span><span class="p">.</span><span class="n">receive</span><span class="o">&lt;</span><span class="n">gxf</span><span class="o">::</span><span class="n">Entity</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;in&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in_message</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">Tensor</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;inference_output_detection_boxes&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// (1, num_boxes, 4)</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">scoresh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in_message</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">Tensor</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;inference_output_detection_scores&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// (1, num_boxes)</span>
+<span class="w">  </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">Nb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scoresh</span><span class="o">-&gt;</span><span class="n">shape</span><span class="p">()[</span><span class="mi">1</span><span class="p">];</span><span class="w">  </span><span class="c1">// Number of boxes</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">Nl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matx</span><span class="o">::</span><span class="n">make_tensor</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">({});</span><span class="w">  </span><span class="c1">// Number of label boxes</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copy_device2vec</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">boxesh</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Holoscan tensors to MatX tensors</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxes_mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matx</span><span class="o">::</span><span class="n">make_tensor</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">boxes</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Nb</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">});</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxesl_mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matx</span><span class="o">::</span><span class="n">make_tensor</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Nl</span><span class="p">(),</span><span class="w"> </span><span class="mi">4</span><span class="p">});</span>
+<span class="w">  </span><span class="p">(</span><span class="n">boxesl_mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matx</span><span class="o">::</span><span class="n">remap</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">boxes_ix_mx</span><span class="p">,</span><span class="w"> </span><span class="n">ixl_mx</span><span class="p">)).</span><span class="n">run</span><span class="p">(</span><span class="n">matx</span><span class="o">::</span><span class="n">SingleThreadHostExecutor</span><span class="p">());</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="c1">// MatX to Holoscan tensor</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">boxes_hs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">holoscan</span><span class="o">::</span><span class="n">Tensor</span><span class="o">&gt;</span><span class="p">(</span><span class="n">boxesls_mx</span><span class="p">.</span><span class="n">GetDLPackTensor</span><span class="p">());</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="integrate-rapids-cucim-library">Integrate RAPIDS cuCIM library<a class="headerlink" href="#integrate-rapids-cucim-library" title="Permanent link">#</a></h3>
+<p><a href="https://github.com/rapidsai/cucim">RAPIDS cuCIM</a> (Compute Unified Device Architecture Clara IMage) is an open-source, accelerated computer vision and image processing software library for multidimensional images used in biomedical, geospatial, material and life science, and remote sensing use cases.</p>
+<p>See the supported Operators in <a href="https://docs.rapids.ai/api/cucim/stable/">cuCIM documentation</a>.</p>
+<p>cuCIM offers interoperability with CuPy. We can initialize CuPy arrays directly from Holoscan Tensors and use the arrays in cuCIM operators for processing without memory transfer between host and device.</p>
+<h4 id="installation_1">Installation<a class="headerlink" href="#installation_1" title="Permanent link">#</a></h4>
+<p>Follow the <a href="https://github.com/rapidsai/cucim?tab=readme-ov-file#install-cucim">cuCIM documentation</a> to install the RAPIDS cuCIM library.</p>
+<h4 id="sample-code_1">Sample code<a class="headerlink" href="#sample-code_1" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cucim.skimage.exposure</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cu_exposure</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cucim.skimage.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">img_as_ubyte</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cucim.skimage.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">img_as_float</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">CustomizedcuCIMOperator</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
+    <span class="c1">### Other implementation of __init__, setup()... etc.</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op_input</span><span class="p">,</span> <span class="n">op_output</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">op_input</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="s2">&quot;input_tensor&quot;</span><span class="p">)</span>
+        <span class="n">input_tensor</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="c1"># Directly use Holoscan tensor to initialize CuPy array</span>
+        <span class="n">cp_array</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">input_tensor</span><span class="p">)</span>
+
+        <span class="n">cp_array</span> <span class="o">=</span> <span class="n">img_as_float</span><span class="p">(</span><span class="n">cp_array</span><span class="p">)</span>
+        <span class="n">cp_res</span><span class="o">=</span><span class="n">cu_exposure</span><span class="o">.</span><span class="n">equalize_adapthist</span><span class="p">(</span><span class="n">cp_array</span><span class="p">)</span>
+        <span class="n">cp_array</span> <span class="o">=</span> <span class="n">img_as_ubyte</span><span class="p">(</span><span class="n">cp_res</span><span class="p">)</span>
+
+        <span class="c1"># Emit CuPy array memory as an item in a `holoscan.TensorMap`</span>
+        <span class="n">op_output</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">out_tensor</span><span class="o">=</span><span class="n">cp_array</span><span class="p">),</span> <span class="s2">&quot;out&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="integrate-cv-cuda-library">Integrate CV-CUDA library<a class="headerlink" href="#integrate-cv-cuda-library" title="Permanent link">#</a></h3>
+<p><a href="https://github.com/CVCUDA/CV-CUDA">CV-CUDA</a> is an open-source, graphics processing unit (GPU)-accelerated library for cloud-scale image processing and computer vision developed jointly by NVIDIA and the ByteDance Applied Machine Learning teams. CV-CUDA helps developers build highly efficient pre- and post-processing pipelines that can improve throughput by more than 10x while lowering cloud computing costs.</p>
+<p>See the supported CV-CUDA Operators in the <a href="https://github.com/CVCUDA/CV-CUDA/blob/main/DEVELOPER_GUIDE.md">CV-CUDA developer guide</a></p>
+<h4 id="installation_2">Installation<a class="headerlink" href="#installation_2" title="Permanent link">#</a></h4>
+<p>Follow the <a href="https://cvcuda.github.io/installation.html">CV-CUDA documentation</a> to install the CV-CUDA library.</p>
+<p>Requirement: CV-CUDA &gt;= 0.2.1 (From which version DLPack interop is supported)</p>
+<h4 id="sample-code_2">Sample code<a class="headerlink" href="#sample-code_2" title="Permanent link">#</a></h4>
+<p>CV-CUDA is implemented with DLPack standards. A CV-CUDA tensor can directly access a Holoscan Tensor.</p>
+<p>Refer to the <a href="https://github.com/nvidia-holoscan/holohub/tree/main/applications/cvcuda_basic">Holoscan CV-CUDA sample application</a> for an example of how to use CV-CUDA with Holoscan SDK.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">cvcuda</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">CustomizedCVCUDAOp</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="c1"># Need to call the base class constructor last</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">:</span> <span class="n">OperatorSpec</span><span class="p">):</span>
+        <span class="n">spec</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;input_tensor&quot;</span><span class="p">)</span>
+        <span class="n">spec</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="s2">&quot;output_tensor&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op_input</span><span class="p">,</span> <span class="n">op_output</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">op_input</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="s2">&quot;input_tensor&quot;</span><span class="p">)</span>
+        <span class="n">input_tensor</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+
+        <span class="n">cvcuda_input_tensor</span> <span class="o">=</span> <span class="n">cvcuda</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">input_tensor</span><span class="p">,</span><span class="s2">&quot;HWC&quot;</span><span class="p">)</span>
+
+        <span class="n">cvcuda_resize_tensor</span> <span class="o">=</span> <span class="n">cvcuda</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span>
+                    <span class="n">cvcuda_input_tensor</span><span class="p">,</span>
+                    <span class="p">(</span>
+                        <span class="mi">640</span><span class="p">,</span>
+                        <span class="mi">640</span><span class="p">,</span>
+                        <span class="mi">3</span><span class="p">,</span>
+                    <span class="p">),</span>
+                    <span class="n">cvcuda</span><span class="o">.</span><span class="n">Interp</span><span class="o">.</span><span class="n">LINEAR</span><span class="p">,</span>
+                <span class="p">)</span>
+
+        <span class="n">buffer</span> <span class="o">=</span> <span class="n">cvcuda_resize_tensor</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+
+        <span class="c1"># Emits an `holoscan.TensorMap` with a single entry `out_tensor`</span>
+        <span class="n">op_output</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">out_tensor</span><span class="o">=</span><span class="n">buffer</span><span class="p">),</span> <span class="s2">&quot;output_tensor&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="integrate-opencv-with-cuda-module">Integrate OpenCV with CUDA Module<a class="headerlink" href="#integrate-opencv-with-cuda-module" title="Permanent link">#</a></h3>
+<p><a href="https://opencv.org/">OpenCV</a> (Open Source Computer Vision Library) is a comprehensive open-source library that contains over 2500 algorithms covering Image &amp; Video Manipulation, Object and Face Detection, OpenCV Deep Learning Module and much more.</p>
+<p>OpenCV also supports GPU <a href="https://docs.opencv.org/4.8.0/d2/dbc/cuda_intro.html">acceleration</a> and includes a CUDA module which is a set of classes and functions to utilize CUDA computational capabilities. It is implemented using NVIDIA CUDA Runtime API and provides utility functions, low-level vision primitives, and high-level algorithms.</p>
+<h4 id="installation_3">Installation<a class="headerlink" href="#installation_3" title="Permanent link">#</a></h4>
+<p>Prerequisites:
+- OpenCV &gt;= 4.8.0 (From which version, OpenCV GpuMat supports initialization with GPU Memory pointer)</p>
+<p>Install OpenCV with its CUDA module following the guide in <a href="https://github.com/opencv/opencv_contrib/tree/4.x">opencv/opencv_contrib</a></p>
+<p>We also recommend referring to the <a href="https://github.com/nvidia-holoscan/holohub/blob/main/applications/endoscopy_depth_estimation/Dockerfile">Holoscan Endoscopy Depth Estimation application container</a> as an example of how to build an image with Holoscan SDK and OpenCV CUDA.</p>
+<h4 id="sample-code_3">Sample code<a class="headerlink" href="#sample-code_3" title="Permanent link">#</a></h4>
+<p>The data type of OpenCV is GpuMat which implements neither the <strong>cuda_array_interface</strong> nor the standard DLPack. To achieve the end-to-end GPU accelerated pipeline/application, we need to implement 2 functions to convert the GpuMat to CuPy array which can be accessed directly with Holoscan Tensor and vice versa.</p>
+<p>Refer to the <a href="https://github.com/nvidia-holoscan/holohub/tree/main/applications/cvcuda_basic">Holoscan Endoscopy Depth Estimation sample application</a> for an example of how to use the OpenCV operator with Holoscan SDK.</p>
+<ol>
+<li>Conversion from GpuMat to CuPy Array</li>
+</ol>
+<p>The GpuMat object of OpenCV Python bindings provides a cudaPtr method that can be used to access the GPU memory address of a GpuMat object. This memory pointer can be utilized to initialize a CuPy array directly, allowing for efficient data handling by avoiding unnecessary data transfers between the host and device.</p>
+<p>Refer to the function below, which is used to create a CuPy array from a GpuMat. For more details, see the source code in <a href="https://github.com/nvidia-holoscan/holohub/blob/main/applications/endoscopy_depth_estimation/endoscopy_depth_estimation.py#L52">holohub/applications/endoscopy_depth_estimation-gpumat_to_cupy</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">gpumat_to_cupy</span><span class="p">(</span><span class="n">gpu_mat</span><span class="p">:</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">GpuMat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cp</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="n">size_in_bytes</span> <span class="o">=</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">step</span> <span class="o">*</span> <span class="n">w</span>
+    <span class="n">shapes</span> <span class="o">=</span> <span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">channels</span><span class="p">())</span>
+    <span class="k">assert</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">channels</span><span class="p">()</span> <span class="o">&lt;=</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Unsupported GpuMat channels&quot;</span>
+
+    <span class="n">dtype</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="n">cv2</span><span class="o">.</span><span class="n">CV_8U</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">CV_8UC1</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">CV_8UC2</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">CV_8UC3</span><span class="p">]:</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">uint8</span>
+    <span class="k">elif</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_8S</span><span class="p">:</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">int8</span>
+    <span class="k">elif</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_16U</span><span class="p">:</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">uint16</span>
+    <span class="k">elif</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_16S</span><span class="p">:</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">int16</span>
+    <span class="k">elif</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_32S</span><span class="p">:</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">int32</span>
+    <span class="k">elif</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_32F</span><span class="p">:</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">float32</span>
+    <span class="k">elif</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">type</span><span class="p">()</span> <span class="o">==</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_64F</span><span class="p">:</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">float64</span>
+
+    <span class="k">assert</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Unsupported GpuMat type&quot;</span>
+
+    <span class="n">mem</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">UnownedMemory</span><span class="p">(</span><span class="n">gpu_mat</span><span class="o">.</span><span class="n">cudaPtr</span><span class="p">(),</span> <span class="n">size_in_bytes</span><span class="p">,</span> <span class="n">owner</span><span class="o">=</span><span class="n">gpu_mat</span><span class="p">)</span>
+    <span class="n">memptr</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">MemoryPointer</span><span class="p">(</span><span class="n">mem</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">cp_out</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span>
+        <span class="n">shapes</span><span class="p">,</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
+        <span class="n">memptr</span><span class="o">=</span><span class="n">memptr</span><span class="p">,</span>
+        <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="n">gpu_mat</span><span class="o">.</span><span class="n">step</span><span class="p">,</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">elemSize</span><span class="p">(),</span> <span class="n">gpu_mat</span><span class="o">.</span><span class="n">elemSize1</span><span class="p">()),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">cp_out</span>
+</code></pre></div>
+<p>Note: In this function, we used the <a href="https://docs.cupy.dev/en/stable/reference/generated/cupy.cuda.UnownedMemory.html#cupy.cuda.UnownedMemory">UnownedMemory</a> API to create the CuPy array. In some cases, the OpenCV operators will allocate new device memory which needs to be handled by CuPy and the lifetime is not limited to one operator but the whole pipeline. In this case, the CuPy array initiated from the GpuMat shall know the owner and keep the reference to the object. Check the CuPy documentation for more details on <a href="https://docs.cupy.dev/en/stable/user_guide/interoperability.html#device-memory-pointers">CuPy interoperability</a>.</p>
+<ol>
+<li>Conversion from Holoscan Tensor to GpuMat via CuPy array</li>
+</ol>
+<p>With the release of OpenCV 4.8, the Python bindings for OpenCV now support the initialization of GpuMat objects directly from GPU memory pointers. This capability facilitates more efficient data handling and processing by allowing direct interaction with GPU-resident data, bypassing the need for data transfer between host and device memory.</p>
+<p>Within pipeline applications based on Holoscan SDK, the GPU Memory pointer can be obtained through the <code>__cuda_array_interface__</code> interface provided by CuPy arrays.</p>
+<p>Refer to the functions outlined below for creating GpuMat objects utilizing CuPy arrays. For a detailed implementation, see the source code provided in <a href="https://github.com/nvidia-holoscan/holohub/blob/main/applications/endoscopy_depth_estimation/endoscopy_depth_estimation.py#L28">holohub/applications/endoscopy_depth_estimation-gpumat_from_cp_array</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">holoscan</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">hs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">holoscan.gxf</span><span class="w"> </span><span class="kn">import</span> <span class="n">Entity</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">gpumat_from_cp_array</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="n">cp</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">GpuMat</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;CuPy array must have 2 or 3 dimensions to be a valid GpuMat&quot;</span>
+    <span class="n">type_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">cp</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">):</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_8U</span><span class="p">,</span>
+        <span class="n">cp</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;int8&#39;</span><span class="p">):</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_8S</span><span class="p">,</span>
+        <span class="n">cp</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;uint16&#39;</span><span class="p">):</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_16U</span><span class="p">,</span>
+        <span class="n">cp</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;int16&#39;</span><span class="p">):</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_16S</span><span class="p">,</span>
+        <span class="n">cp</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;int32&#39;</span><span class="p">):</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_32S</span><span class="p">,</span>
+        <span class="n">cp</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">):</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_32F</span><span class="p">,</span>
+        <span class="n">cp</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">):</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_64F</span>
+    <span class="p">}</span>
+    <span class="n">depth</span> <span class="o">=</span> <span class="n">type_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Unsupported CuPy array dtype&quot;</span>
+    <span class="n">channels</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">mat_type</span> <span class="o">=</span> <span class="n">depth</span> <span class="o">+</span> <span class="p">((</span><span class="n">channels</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">)</span>
+
+     <span class="n">mat</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">createGpuMatFromCudaMemory</span><span class="p">(</span>
+      <span class="n">arr</span><span class="o">.</span><span class="n">__cuda_array_interface__</span><span class="p">[</span><span class="s1">&#39;shape&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+      <span class="n">mat_type</span><span class="p">,</span>
+      <span class="n">arr</span><span class="o">.</span><span class="n">__cuda_array_interface__</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+  <span class="p">)</span>
+    <span class="k">return</span> <span class="n">mat</span>
+</code></pre></div>
+<ol>
+<li>Integrate OpenCV Operators inside customized Operator</li>
+</ol>
+<p>The demonstration code is provided below. For the complete source code, please refer to the <a href="https://github.com/nvidia-holoscan/holohub/blob/main/applications/endoscopy_depth_estimation/endoscopy_depth_estimation.py#L161">holohub/applications/endoscopy_depth_estimation-customized Operator</a>.</p>
+<div class="highlight"><pre><span></span><code>   <span class="k">def</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op_input</span><span class="p">,</span> <span class="n">op_output</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="n">stream</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cuda_Stream</span><span class="p">()</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">op_input</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="s2">&quot;in&quot;</span><span class="p">)</span>
+
+        <span class="n">cp_frame</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">))</span>  <span class="c1"># CuPy array</span>
+        <span class="n">cv_frame</span> <span class="o">=</span> <span class="n">gpumat_from_cp_array</span><span class="p">(</span><span class="n">cp_frame</span><span class="p">)</span>  <span class="c1"># GPU OpenCV mat</span>
+
+        <span class="c1">## Call OpenCV Operator</span>
+        <span class="n">cv_frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">XXX</span><span class="p">(</span><span class="n">hsv_merge</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_HSV2RGB</span><span class="p">)</span>
+
+        <span class="n">cp_frame</span> <span class="o">=</span> <span class="n">gpumat_to_cupy</span><span class="p">(</span><span class="n">cv_frame</span><span class="p">)</span>
+        <span class="n">cp_frame</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">cp_frame</span><span class="p">)</span>
+
+        <span class="n">op_output</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">out_tensor</span><span class="o">=</span><span class="n">cp_frame</span><span class="p">),</span> <span class="s2">&quot;out&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="integrate-pytorch-library">Integrate PyTorch library<a class="headerlink" href="#integrate-pytorch-library" title="Permanent link">#</a></h3>
+<p><a href="https://pytorch.org/">PyTorch</a> is a popular open-source machine learning library developed by Facebook's AI Research lab. It provides a flexible and dynamic computational graph that allows for easy model building and training. PyTorch also supports GPU acceleration, making it ideal for deep learning applications that require high-performance computing.</p>
+<p>Since PyTorch tensors support the array interface and DLPack (<a href="https://github.com/pytorch/pytorch/issues/15601">link</a>), they can be interoperable with other array/tensor objects including Holoscan Tensors.</p>
+<h4 id="installation_4">Installation<a class="headerlink" href="#installation_4" title="Permanent link">#</a></h4>
+<p>Follow the <a href="https://pytorch.org/">PyTorch documentation</a> to install the PyTorch library.</p>
+<p>e.g., for CUDA 12.x with pip:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>torchvision<span class="w"> </span>torchaudio
+</code></pre></div>
+<h4 id="sample-code_4">Sample code<a class="headerlink" href="#sample-code_4" title="Permanent link">#</a></h4>
+<p>The following is a sample application that demonstrates how to use PyTorch with Holoscan SDK:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">CustomizedTorchOperator</span><span class="p">(</span><span class="n">Operator</span><span class="p">):</span>
+    <span class="c1">### Other implementation of __init__, setup()... etc.</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op_input</span><span class="p">,</span> <span class="n">op_output</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">op_input</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="s2">&quot;input_tensor&quot;</span><span class="p">)</span>
+        <span class="n">input_tensor</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="c1"># Directly use Holoscan tensor to initialize PyTorch tensor</span>
+        <span class="n">torch_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">input_tensor</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+
+        <span class="n">torch_tensor</span> <span class="o">*=</span> <span class="mi">2</span>
+
+        <span class="c1"># Emit PyTorch tensor memory as a `holoscan.Tensor` item in a `holoscan.TensorMap`</span>
+        <span class="n">op_output</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">out_tensor</span><span class="o">=</span><span class="n">torch_tensor</span><span class="p">),</span> <span class="s2">&quot;out&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="cuda-interoperability">CUDA Interoperability<a class="headerlink" href="#cuda-interoperability" title="Permanent link">#</a></h2>
+<h3 id="integrate-cuda-python-library">Integrate CUDA Python library<a class="headerlink" href="#integrate-cuda-python-library" title="Permanent link">#</a></h3>
+<p><a href="https://developer.nvidia.com/cuda-python">CUDA Python</a> is a Python library that provides Cython/Python wrappers for CUDA driver and runtime APIs. It offers a convenient way to leverage GPU acceleration for complex computations, making it ideal for high-performance applications that require intensive numerical processing.</p>
+<p>When using CUDA Python with the Holoscan SDK, you need to use the Primary context (<a href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__DRIVER.html#group__CUDART__DRIVER">CUDA doc link</a>) by calling <code>cuda.cuDevicePrimaryCtxRetain()</code> (<a href="https://nvidia.github.io/cuda-python/module/cuda.html#primary-context-management">link</a>).</p>
+<p>Since the Holoscan Operator is executed in an arbitrary non-main thread, you may need to set the CUDA context using the <a href="https://nvidia.github.io/cuda-python/module/cuda.html#cuda.cuda.cuCtxSetCurrent">cuda.cuCtxSetCurrent()</a> method in the <code>Operator.compute()</code> method.</p>
+<h4 id="installation_5">Installation<a class="headerlink" href="#installation_5" title="Permanent link">#</a></h4>
+<p>Follow the instructions in the <a href="https://nvidia.github.io/cuda-python/install.html">CUDA Python documentation</a> to install the CUDA Python library.</p>
+<p>CUDA Python can be installed using <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>cuda-python
+</code></pre></div>
+<h4 id="sample-code_5">Sample code<a class="headerlink" href="#sample-code_5" title="Permanent link">#</a></h4>
+<p>Please see the example application (<a href="https://github.com/nvidia-holoscan/holohub/blob/main/tutorials/integrate_external_libs_into_pipeline/cuda_example.py">cuda_example.py</a>) that demonstrates how to use CUDA Python with the Holoscan SDK.</p>
+<p>In this example, we define a <code>CudaOperator</code> class that encapsulates the CUDA context, stream, and memory management. The <code>CudaOperator</code> class provides methods for allocating device memory, building CUDA kernels, launching kernels, and cleaning up. We also define three operators: <code>CudaTxOp</code>, <code>ApplyGainOp</code>, and <code>CudaRxOp</code>, which perform data initialization, apply a gain operation, and process the output data, respectively. The output of the <code>CudaRxOp</code> operator is passed to both a <code>ProbeOp</code> operator, which inspects the data and prints the metadata information, and a <code>HolovizOp</code> operator, which visualizes the data using the Holoviz module.</p>
+<p>There are four examples in the <code>CudaRxOp.compute()</code> method that demonstrate different ways to handle data conversion and transfer between tensor libraries. These examples include creating 1) a NumPy array from CUDA memory, 2) converting a NumPy array to a CuPy array, 3) creating a CUDA array interface object, and 4) creating a CuPy array from CUDA memory.</p>
+<p><code>__cuda_array_interface__</code> is a dictionary that provides a standard interface for exchanging array data between different libraries in Python. It contains metadata such as the shape, data type, and memory location of the array. By using this interface, you can efficiently transfer tensor data between two libraries without copying the data.</p>
+<p>In the following example, we create a <code>CudaArray</code> class to represent a CUDA array interface object and populate it with the necessary metadata. This object can then be passed to the <code>op_output.emit()</code> method to transfer the data to downstream operators.</p>
+<p>In the <code>__cuda_array_interface__</code> dictionary, the <code>stream</code> field is the CUDA stream associated with the data. When passing a <code>cuda.cuda.CUstream</code> object (the variable named <code>stream</code>) to the <code>stream</code> field, you need to convert it to an integer using <code>int(stream)</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">CudaRxOp</span><span class="p">(</span><span class="n">CudaOperator</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op_input</span><span class="p">,</span> <span class="n">op_output</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+        <span class="k">class</span><span class="w"> </span><span class="nc">CudaArray</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Class to represent a CUDA array interface object.&quot;&quot;&quot;</span>
+
+            <span class="k">pass</span>
+
+        <span class="n">cuda_array</span> <span class="o">=</span> <span class="n">CudaArray</span><span class="p">()</span>
+
+        <span class="c1"># Reference: https://numba.readthedocs.io/en/stable/cuda/cuda_array_interface.html</span>
+        <span class="n">cuda_array</span><span class="o">.</span><span class="n">__cuda_array_interface__</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_frame_height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_channels</span><span class="p">),</span>
+            <span class="s2">&quot;typestr&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="p">,</span>  <span class="c1"># &quot;|u1&quot;</span>
+            <span class="s2">&quot;descr&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="p">)],</span>
+            <span class="s2">&quot;stream&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">stream</span><span class="p">),</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;strides&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">}</span>
+        <span class="c1"># ...</span>
+</code></pre></div>
+<p>Please don't confuse this with the <code>cuda.cuda.CUstream.getPtr()</code> method. If you use the <code>stream.getPtr()</code> method, it will return a pointer to the CUDA stream object, not the stream ID. To get the stream ID, you need to convert the <code>stream</code> object to an integer using <code>int(stream)</code>. Otherwise, you will get an error that is difficult to debug, like this:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>error<span class="o">]</span><span class="w"> </span><span class="o">[</span>tensor.cpp:479<span class="o">]</span><span class="w"> </span>Runtime<span class="w"> </span>call<span class="w"> </span><span class="s2">&quot;Failure during call to cudaEventRecord&quot;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>line<span class="w"> </span><span class="m">479</span><span class="w"> </span>of<span class="w"> </span>file<span class="w"> </span>../python/holoscan/core/tensor.cpp<span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;context is destroyed&#39;</span><span class="w"> </span><span class="o">(</span><span class="m">709</span><span class="o">)</span>
+<span class="o">[</span>error<span class="o">]</span><span class="w"> </span><span class="o">[</span>gxf_wrapper.cpp:84<span class="o">]</span><span class="w"> </span>Exception<span class="w"> </span>occurred<span class="w"> </span><span class="k">for</span><span class="w"> </span>operator:<span class="w"> </span><span class="s1">&#39;rx&#39;</span><span class="w"> </span>-<span class="w"> </span>RuntimeError:<span class="w"> </span>Error<span class="w"> </span>occurred<span class="w"> </span><span class="k">in</span><span class="w"> </span>CUDA<span class="w"> </span>runtime<span class="w"> </span>API<span class="w"> </span>call
+</code></pre></div>
+<h3 id="integrate-cupy-library">Integrate CuPy library<a class="headerlink" href="#integrate-cupy-library" title="Permanent link">#</a></h3>
+<p><a href="https://cupy.dev/">CuPy</a> is an open-source array library for GPU-accelerated computing with a NumPy-compatible API. It provides a convenient way to perform high-performance numerical computations on NVIDIA GPUs, making it ideal for applications that require efficient data processing and manipulation.</p>
+<h4 id="installation_6">Installation<a class="headerlink" href="#installation_6" title="Permanent link">#</a></h4>
+<p>CuPy can be installed using <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>cupy-cuda12x<span class="w">  </span><span class="c1"># for CUDA v12.x</span>
+</code></pre></div>
+<p>For more detailed installation instructions, refer to the <a href="https://docs.cupy.dev/en/stable/install.html">CuPy documentation</a>.</p>
+<h4 id="sample-code_6">Sample code<a class="headerlink" href="#sample-code_6" title="Permanent link">#</a></h4>
+<p>Please see the example application (<a href="https://github.com/nvidia-holoscan/holohub/blob/main/tutorials/integrate_external_libs_into_pipeline/cupy_example.py">cupy_example.py</a>) that demonstrates how to use CuPy with the Holoscan SDK.</p>
+<p>This example performs the same operations as the previous example but uses CuPy instead of <a href="#integrate-cuda-python-library">CUDA Python</a>. The <code>CudaOperator</code> class is modified to use CuPy arrays, and the <code>ApplyGainOp</code> operator is updated to use CuPy functions for array manipulation. The <code>CudaTxOp</code> and <code>CudaRxOp</code> operators are also updated to work with CuPy arrays.</p>
+<p>With CuPy, you can conveniently perform GPU-accelerated computations on multidimensional arrays, making it an excellent choice for high-performance data processing tasks in Holoscan applications.</p>
+<p>Please note that CuPy does not fully support certain CUDA APIs, such as <code>cupy.cuda.driver.occupancyMaxPotentialBlockSize()</code>. While the driver API may be available (<a href="https://github.com/cupy/cupy/pull/2424">link</a>), it is currently undocumented (<a href="https://docs.cupy.dev/en/stable/reference/cuda.html">link</a>) and lacks support for calling the API with RawKernel's pointer (<a href="https://github.com/cupy/cupy/issues/2450">link</a>), or using CUDA Python's <code>cuda.cuOccupancyMaxPotentialBlockSize()</code> Driver API with CuPy-generated RawKernel functions.</p>
+<p>Currently, direct assignment of a non-default CUDA stream to HolovizOp in Holoscan applications is not supported without utilizing the <code>holoscan.resources.CudaStreamPool</code> resource. CuPy also has limited support for custom stream management, necessitating reliance on the default stream in this context.</p>
+<p>For more detailed information, please refer to the following resources:
+- <a href="https://github.com/cupy/cupy/issues/3684">New RawKernel Calling Convention / Kernel Occupancy Functions · Issue #3684 · cupy/cupy · GitHub</a>
+- CUDA Stream Support:
+  - <a href="https://github.com/cupy/cupy/issues/8068">Enhancing stream support in CuPy's default memory pool · Issue #8068 · cupy/cupy</a>
+  - <a href="https://docs.cupy.dev/en/stable/reference/generated/cupy.cuda.ExternalStream.html">cupy.cuda.ExternalStream — CuPy 13.1.0 documentation</a></p>
+
 
 
 
@@ -12009,8 +12748,6 @@ can be used to perform an optimize task.</p>
 
   
 
-
-  
 
 
 
@@ -12034,19 +12771,33 @@ can be used to perform an optimize task.</p>
   
     
       
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
+          
+          <a href="../holoscan_response_time_analysis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Holoscan SDK Response Time Analysis (latest)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Holoscan SDK Response Time Analysis (latest)
+              </div>
+            </div>
+          </a>
         
         
           
-          <a href="workflows/" class="md-footer__link md-footer__link--next" aria-label="Next: Workflows">
+          <a href="../windows_vm/" class="md-footer__link md-footer__link--next" aria-label="Next: Interoperability between Holoscan and a Windows Application on a Single Machine (latest)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Workflows
+                Interoperability between Holoscan and a Windows Application on a Single Machine (latest)
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -12097,10 +12848,10 @@ can be used to perform an optimize task.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.instant.prefetch", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tabs", "navigation.indexes", "navigation.instant", "navigation.path", "navigation.instant.prefetch", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>
